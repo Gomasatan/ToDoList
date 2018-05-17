@@ -8,37 +8,22 @@
 
 import UIKit
 
-class ToDoAddViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+class ToDoAddViewController: UITabBarController{
+    
+  override func viewDidLoad() {
+      super.viewDidLoad()
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+     func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
     
-    var mySwitch: UISwitch = UISwitch()
-    //うんち
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        mySwitch.isOn = true //スイッチをOnに設定
-        mySwitch.addTarget(self, action: #selector(ToDoAddViewController.onClickMySwitch(sender:)), for: UIControlEvents.valueChanged)
-        
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
     
-    @objc internal func onClickMySwitch(sender: UISwitch){
-        if sender.isOn{
-            //スイッチがオンになった時の処理
-            
-        }else{
-            
-        }
-        
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
